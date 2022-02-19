@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <title>SHIPMENTS ONLINE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+
+    <!-- Plugins css -->
+    <link href="libs/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet"/>
+    <link href="libs/select2/select2.min.css" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" href="libs/smartwizard/smart_wizard.min.css" type="text/css"/>
+    <link rel="stylesheet" href="libs/smartwizard/smart_wizard_theme_arrows.min.css" type="text/css" />
+    <link rel="stylesheet" href="libs/smartwizard/smart_wizard_theme_circles.min.css" type="text/css" />
+    <link rel="stylesheet" href="libs/smartwizard/smart_wizard_theme_dots.min.css" type="text/css" />
+
+    <!-- App css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/icons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/app.min.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+
+<!-- Begin page -->
+<div id="wrapper">
+
+    <!-- Topbar Start -->
+    <div class="navbar navbar-expand flex-column flex-md-row navbar-custom">
+        <div class="container-fluid">
+            <!-- LOGO -->
+            <a href="index.html" class="navbar-brand mr-0 mr-md-2 logo">
+                <span class="logo-lg">
+                    <span class="d-inline h5 ml-1 text-logo">SHIPMENTS ONLINE</span>
+                </span>
+            </a>
+
+            <ul class="navbar-nav bd-navbar-nav flex-row list-unstyled menu-left mb-0">
+                <li class="">
+                    <button class="button-menu-mobile open-left disable-btn">
+                        <i data-feather="menu" class="menu-icon"></i>
+                        <i data-feather="x" class="close-icon"></i>
+                    </button>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav flex-row ml-auto d-flex list-unstyled topnav-menu float-right mb-0">
+
+
+                <li class="dropdown notification-list" data-toggle="tooltip" data-placement="left"
+                    title="Новых Оповещений - 4">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+                        <i data-feather="bell"></i>
+
+                        <!-- blink -->
+                        <span class="noti-icon-badge"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                        <!-- item-->
+                        <div class="dropdown-item noti-title border-bottom">
+                            <h5 class="m-0 font-size-16">
+                                <span class="float-right">
+                                    <a href="" class="text-dark">
+                                        <small>Очистить всё</small>
+                                    </a>
+                                </span>
+                                Оповещения
+                            </h5>
+                        </div>
+
+                        <div class="slimscroll noti-scroll">
+
+                            <!-- item-->
+                            <a href="#" class="dropdown-item notify-item border-bottom">
+                                <div class="notify-icon bg-warning">
+                                    <i class="uil uil-grid"></i>
+                                </div>
+                                <p class="notify-details">
+                                    Не заполнены поля №223322
+                                    <small class="text-muted">
+                                        Перейти к заполнению
+                                    </small>
+                                </p>
+                            </a>
+
+                            <!-- item-->
+                            <a href="#" class="dropdown-item notify-item border-bottom">
+                                <div class="notify-icon bg-danger">
+                                    <i class="uil uil-calendar-alt"></i>
+                                </div>
+                                <p class="notify-details">
+                                    Превышен срок прибытия №224433
+                                    <small class="text-muted">
+                                        Перейти к перевозке
+                                    </small>
+                                </p>
+                            </a>
+
+                            <!-- item-->
+                            <a href="#" class="dropdown-item notify-item border-bottom">
+                                <div class="notify-icon bg-danger">
+                                    <i class="uil uil-calendar-alt"></i>
+                                </div>
+                                <p class="notify-details">
+                                    Превышен срок отправки №55544
+                                    <small class="text-muted">
+                                        Перейти к перевозке
+                                    </small>
+                                </p>
+                            </a>
+
+                            <!-- item-->
+                            <a href="#" class="dropdown-item notify-item border-bottom">
+                                <div class="notify-icon bg-warning">
+                                    <i class="uil uil-grid"></i>
+                                </div>
+                                <p class="notify-details">
+                                    Не заполнены поля №44344
+                                    <small class="text-muted">
+                                        Перейти к заполнению
+                                    </small>
+                                </p>
+                            </a>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- end Topbar -->
+
+    <!-- ========== Left Sidebar Start ========== -->
+    <div class="left-side-menu">
+        <div class="media user-profile mt-2 mb-2">
+            <div class="media-body">
+                <h6 class="pro-user-name mt-0 mb-0">Иванов Иван</h6>
+                <span class="pro-user-desc">Администратор</span>
+            </div>
+            <div class="dropdown align-self-center profile-dropdown-menu">
+                <a class="dropdown-toggle mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
+                   aria-expanded="false">
+                    <span data-feather="chevron-down"></span>
+                </a>
+                <div class="dropdown-menu profile-dropdown">
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i data-feather="log-out" class="icon-dual icon-xs mr-2"></i>
+                        <span>Сменить пользователя</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-content">
+            <!--- Sidemenu -->
+            <div id="sidebar-menu" class="slimscroll-menu">
+                <ul class="metismenu" id="menu-bar">
+                    <li class="menu-title">Меню</li>
+
+                    <li>
+                        <a href="shipments.html">
+                            <i data-feather="book-open"></i>
+                            <span>Перевозки</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shipments_user.html">
+                            <i data-feather="bookmark"></i>
+                            <span>Мои перевозки</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shipments_create.html">
+                            <i class="text-success" data-feather="check-square"></i>
+                            <span class="text-success">Новая перевозка *</span>
+                        </a>
+                    </li>
+
+                    <li class="menu-title">Отчёты</li>
+
+                    <li>
+                        <a href="report_all_user.html">
+                            <i data-feather="layers"></i>
+                            <span>Сводный</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript: void(0);">
+                            <i data-feather="calendar"></i>
+                            <span>За период</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+
+                        <ul class="nav-second-level" aria-expanded="false">
+
+                            <li>
+                                <a href="report_all_user.html">По сотруднику</a>
+                            </li>
+                            <li>
+                                <a href="report_seller.html">По продавцу</a>
+                            </li>
+                            <li>
+                                <a href="report_client.html">По клиенту</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-title text-danger">Администратор</li>
+
+                    <li>
+                        <a href="users.html">
+                            <i data-feather="users"></i>
+                            <span>Сотрудники</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shipments_user.html">
+                            <i data-feather="list"></i>
+                            <span>Перевозки</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="types.html">
+                            <i data-feather="check-circle"></i>
+                            <span>Типы перевозки</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="data.html">
+                            <i data-feather="server"></i>
+                            <span>Списки</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- End Sidebar -->
+
+            <div class="clearfix"></div>
+        </div>
+        <!-- Sidebar -left -->
+
+    </div>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+        <div class="content">
+
+            <!-- Start Content-->
+            <div class="container-fluid">
+                <div class="row page-title">
+                    <div class="col-md-12">
+                        <h3 class="mb-1 mt-0">Редактировать перевозку</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Тип перевозки "Море"</h4>
+                                <h4 id="data_header" class="d-none">Данные</h4>
+                                <div id="new-shipment">
+                                    <ul>
+                                        <li><a href="#field-1" style="font-size: .7rem">Клиент</a></li>
+                                        <li><a href="#field-2" style="font-size: .7rem">Номер</a></li>
+                                        <li><a href="#field-3" style="font-size: .7rem">Подрядчики</a></li>
+                                        <li><a href="#field-4" style="font-size: .7rem">Условия</a></li>
+                                        <li><a href="#field-5" style="font-size: .7rem">Тип контейнера</a></li>
+                                        <li><a href="#field-6" style="font-size: .7rem">№ транс. док</a></li>
+                                        <li><a href="#field-7" style="font-size: .7rem">№ контейнера</a></li>
+                                        <li><a href="#field-8" style="font-size: .7rem">Порты</a></li>
+                                        <li><a href="#field-9" style="font-size: .7rem">Загрузка</a></li>
+                                        <li><a href="#field-10" style="font-size: .7rem">Доставка</a></li>
+                                        <li><a href="#field-11" style="font-size: .7rem">Даты</a></li>
+                                        <li><a href="#field-12" style="font-size: .7rem">Завершить</a></li>
+                                    </ul>
+
+                                    <div class="p-3">
+                                        <div id="field-1">
+                                            <h2>Клиент</h2>
+                                            <div class="col-xl-4 col-lg-6 col-md-8 col-sm-12 p-0 m-0">
+                                                <select class="custom-select wizard-select"
+                                                        name="client"
+                                                        data-plugin="customselect"
+                                                        data-placeholder="Выберите клиента"
+                                                >
+                                                    <option></option>
+                                                    <option value="1" selected>Клиент 1</option>
+                                                    <option value="2">Клиент 2</option>
+                                                    <option value="3">Клиент 3</option>
+                                                    <option value="4">Клиент 4</option>
+                                                    <option value="5">Клиент 5</option>
+                                                    <option value="6">Клиент 6</option>
+                                                    <option value="7">Клиент 7</option>
+                                                    <option value="8">Клиент 8</option>
+                                                    <option value="9">Клиент 9</option>
+                                                    <option value="10">Клиент 10</option>
+                                                    <option value="11">Клиент 11</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div id="field-2">
+                                            <h2>Номер позиционника</h2>
+                                            <input class="for-validation form-control form-control-lg col-xl-4 col-lg-6 col-md-8 col-sm-12"
+                                                   onKeyPress="if (this.value.length == 5) return false;"
+                                                   type="number"
+                                                   name="position"
+                                                   placeholder="00000"
+                                                   max="99999"
+                                                   maxlength="5"
+                                                   value="12345"
+                                                   data-parsley-pattern="\d{5}"
+                                                   data-parsley-trigger="input"
+                                                   data-parsley-error-message="Это поле должно состоять из 5-ти цифр"
+                                            >
+                                        </div>
+                                        <div id="field-3">
+                                            <h2>Подрядчики
+                                                <button class="btn btn-primary btn-rounded"
+                                                        id="add-contractor"
+                                                        data-toggle="tooltip"
+                                                        data-placement="right" title=""
+                                                        data-original-title="Добавить подрядчика"
+                                                ><i data-feather="plus-circle"></i></button>
+                                            </h2>
+                                            <div id="contractor-selectors-holder"
+                                                 class="col-xl-4 col-lg-6 col-md-8 col-sm-12">
+                                                <div class="mb-2 contractor-selector multiple-input-selector row">
+                                                    <div class="col-10">
+                                                        <select name="contractors[]"
+                                                                data-plugin="customselect"
+                                                                data-placeholder="Выберите подрядчика"
+                                                        >
+                                                            <option></option>
+                                                            <option value="1" selected>Подрядчик 1</option>
+                                                            <option value="2">Подрядчик 2</option>
+                                                            <option value="3">Подрядчик 3</option>
+                                                            <option value="4">Подрядчик 4</option>
+                                                            <option value="5">Подрядчик 5</option>
+                                                            <option value="6">Подрядчик 6</option>
+                                                            <option value="7">Подрядчик 7</option>
+                                                            <option value="8">Подрядчик 8</option>
+                                                            <option value="9">Подрядчик 9</option>
+                                                            <option value="10">Подрядчик 10</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button class="btn btn-danger btn-rounded multiple-input-delete"
+                                                                type="button"
+                                                                data-toggle="tooltip"
+                                                                data-placement="right" title=""
+                                                                data-original-title="Удалить подрядчика"
+                                                        ><i data-feather="minus-circle"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="field-4">
+                                            <h2>Условие поставки</h2>
+                                            <div class="col-xl-4 col-lg-6 col-md-8 col-sm-12 p-0 m-0">
+                                                <select class="custom-select wizard-select"
+                                                        name="delivery_condition"
+                                                        data-plugin="customselect"
+                                                        data-placeholder="Выберите условие поставки"
+                                                >
+                                                    <option></option>
+                                                    <option value="1" selected>Условие 1</option>
+                                                    <option value="2">Условие 2</option>
+                                                    <option value="3">Условие 3</option>
+                                                    <option value="4">Условие 4</option>
+                                                    <option value="5">Условие 5</option>
+                                                    <option value="6">Условие 6</option>
+                                                    <option value="7">Условие 7</option>
+                                                    <option value="8">Условие 8</option>
+                                                    <option value="9">Условие 9</option>
+                                                    <option value="10">Условие 10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div id="field-5">
+                                            <h2>Тип Контейнера</h2>
+                                            <div class="col-xl-4 col-lg-6 col-md-8 col-sm-12 p-0 m-0">
+                                                <select class="custom-select wizard-select"
+                                                        name="container"
+                                                        data-plugin="customselect"
+                                                        data-placeholder="Выберите тип контейнера"
+                                                >
+                                                    <option></option>
+                                                    <option value="1" selected>Контейнер 1</option>
+                                                    <option value="2">Контейнер 2</option>
+                                                    <option value="3">Контейнер 3</option>
+                                                    <option value="4">Контейнер 4</option>
+                                                    <option value="5">Контейнер 5</option>
+                                                    <option value="6">Контейнер 6</option>
+                                                    <option value="7">Контейнер 7</option>
+                                                    <option value="8">Контейнер 8</option>
+                                                    <option value="9">Контейнер 9</option>
+                                                    <option value="10">Контейнер 10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div id="field-6">
+                                            <h2>Номер транспортного документа</h2>
+                                            <input class="form-control form-control-lg col-xl-4 col-lg-6 col-md-8 col-sm-12"
+                                                   type="text"
+                                                   name="transport_doc_number"
+                                                   placeholder="Введите номер транспортного документа"
+                                                   value="123123123123"
+                                            >
+                                        </div>
+                                        <div id="field-7">
+                                            <h2>Номер контейнера</h2>
+                                            <input class="for-validation form-control form-control-lg col-xl-4 col-lg-6 col-md-8 col-sm-12"
+                                                   onKeyPress="if (this.value.length == 12) return false;"
+                                                   type="text"
+                                                   name="container_number"
+                                                   placeholder="AAAA0000000"
+                                                   data-parsley-pattern="\w{4}\d{8}"
+                                                   data-parsley-trigger="input"
+                                                   data-parsley-error-message="Это поле должно состоять из 4-х букв и 8-ми цифр"
+                                                   value="AAAA12345678"
+                                            >
+                                        </div>
+                                        <div id="field-8">
+                                            <h2>Порты
+                                                <button class="btn btn-primary btn-rounded"
+                                                        id="add-port"
+                                                        data-toggle="tooltip"
+                                                        data-placement="right" title=""
+                                                        data-original-title="Добавить порт"
+                                                ><i data-feather="plus-circle"></i></button>
+                                            </h2>
+                                            <div id="port-selectors-holder"
+                                                 class="col-xl-4 col-lg-6 col-md-8 col-sm-12">
+                                                <div class="mb-2 port-selector multiple-input-selector row">
+                                                    <div class="col-10">
+                                                        <select name="ports[]"
+                                                                data-plugin="customselect"
+                                                                data-placeholder="Выберите порт"
+                                                        >
+                                                            <option></option>
+                                                            <option value="1" selected>Порт 1</option>
+                                                            <option value="2">Порт 2</option>
+                                                            <option value="3">Порт 3</option>
+                                                            <option value="4">Порт 4</option>
+                                                            <option value="5">Порт 5</option>
+                                                            <option value="6">Порт 6</option>
+                                                            <option value="7">Порт 7</option>
+                                                            <option value="8">Порт 8</option>
+                                                            <option value="9">Порт 9</option>
+                                                            <option value="10">Порт 10</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button class="btn btn-danger btn-rounded multiple-input-delete"
+                                                                type="button"
+                                                                data-toggle="tooltip"
+                                                                data-placement="right" title=""
+                                                                data-original-title="Удалить порт"
+                                                        ><i data-feather="minus-circle"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2 port-selector multiple-input-selector row">
+                                                    <div class="col-10">
+                                                        <select name="ports[]"
+                                                                data-plugin="customselect"
+                                                                data-placeholder="Выберите порт"
+                                                        >
+                                                            <option></option>
+                                                            <option value="1">Порт 1</option>
+                                                            <option value="2" selected>Порт 2</option>
+                                                            <option value="3">Порт 3</option>
+                                                            <option value="4">Порт 4</option>
+                                                            <option value="5">Порт 5</option>
+                                                            <option value="6">Порт 6</option>
+                                                            <option value="7">Порт 7</option>
+                                                            <option value="8">Порт 8</option>
+                                                            <option value="9">Порт 9</option>
+                                                            <option value="10">Порт 10</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <button class="btn btn-danger btn-rounded multiple-input-delete"
+                                                                type="button"
+                                                                data-toggle="tooltip"
+                                                                data-placement="right" title=""
+                                                                data-original-title="Удалить порт"
+                                                        ><i data-feather="minus-circle"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="field-9">
+                                            <h2>Место загрузки</h2>
+                                            <div class="col-xl-4 col-lg-6 col-md-8 col-sm-12 p-0 m-0">
+                                                <select class="custom-select wizard-select"
+                                                        name="load_place"
+                                                        data-plugin="customselect"
+                                                        data-placeholder="Выберите место загрузки"
+                                                >
+                                                    <option></option>
+                                                    <option value="1" selected>Место загрузки 1</option>
+                                                    <option value="2">Место загрузки 2</option>
+                                                    <option value="3">Место загрузки 3</option>
+                                                    <option value="4">Место загрузки 4</option>
+                                                    <option value="5">Место загрузки 5</option>
+                                                    <option value="6">Место загрузки 6</option>
+                                                    <option value="7">Место загрузки 7</option>
+                                                    <option value="8">Место загрузки 8</option>
+                                                    <option value="9">Место загрузки 9</option>
+                                                    <option value="10">Место загрузки 10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div id="field-10">
+                                            <h2>Место доставки</h2>
+                                            <div class="col-xl-4 col-lg-6 col-md-8 col-sm-12 p-0 m-0 delivery-place-block">
+                                                <select class="wizard-select"
+                                                        name="delivery_place"
+                                                        data-plugin="customselect"
+                                                        data-placeholder="Выберите место доставки"
+                                                >
+                                                    <option></option>
+                                                    <option value="1" selected>Место доставки 1</option>
+                                                    <option value="2">Место доставки 2</option>
+                                                    <option value="3">Место доставки 3</option>
+                                                    <option value="4">Место доставки 4</option>
+                                                    <option value="5">Место доставки 5</option>
+                                                    <option value="6">Место доставки 6</option>
+                                                    <option value="7">Место доставки 7</option>
+                                                    <option value="8">Место доставки 8</option>
+                                                    <option value="9">Место доставки 9</option>
+                                                    <option value="10">Место доставки 10</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-6 col-md-8 col-sm-12 p-0 m-0 delivery-place-notification d-none">
+                                                <div class="alert alert-warning"
+                                                     role="alert">
+                                                    Для выбора места доставки необходимо выбрать клиента!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="field-11">
+                                            <h2>Даты</h2>
+                                            <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12 p-0 m-0">
+                                                <div class="row  mb-1">
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="load_date">Дата затарки</label>
+                                                            <input class="form-control form-control-sm" id="load_date" type="date" name="load_date" value="2020-09-25">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-1">
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="send_planned_date">Дата отправления плановая</label>
+                                                            <input class="form-control form-control-sm" id="send_planned_date" type="date" name="send_planned_date" value="2020-09-25">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="send_actual_date">Дата отправления фактическая</label>
+                                                            <input class="form-control form-control-sm" id="send_actual_date" type="date" name="send_actual_date" value="2020-09-25">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-1">
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="arrival_plan_date">Дата прибытия плановая</label>
+                                                            <input class="form-control form-control-sm" id="arrival_plan_date" type="date" name="arrival_plan_date" value="2020-09-25">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="arrival_actual_date">Дата прибытия фактическая</label>
+                                                            <input class="form-control form-control-sm" id="arrival_actual_date" type="date" name="arrival_actual_date" value="2020-09-25">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-1">
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="delivery_end_date">Дата закрытия доставки</label>
+                                                            <input class="form-control form-control-sm" id="delivery_end_date" type="date" name="delivery_end_date" value="2020-09-25">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="release_date">Дата выпуска</label>
+                                                            <input class="form-control form-control-sm" id="release_date" type="date" name="release_date" value="2020-09-25">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-1">
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="delivery_actual_date">Дата доставки фактическая</label>
+                                                            <input class="form-control form-control-sm" id="delivery_actual_date" type="date" name="delivery_actual_date" value="2020-09-25">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="field-12">
+                                            <h2>Комментарий</h2>
+                                            <textarea name="comment" class="form-control" rows="5" placeholder="Напишите комментарий (не обязательно)">Доработать</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-success btn-lg mt-3">Сохранить изменения</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- container-fluid -->
+
+        </div> <!-- content -->
+
+
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        2020 &copy; Shipments Online
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+
+</div>
+<!-- END wrapper -->
+
+<!-- Vendor js -->
+<script src="js/vendor.min.js"></script>
+
+<!-- Plugins Js -->
+<script src="libs/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+<script src="libs/select2/select2.min.js"></script>
+
+<!-- App js -->
+<script src="js/app.min.js"></script>
+
+<script src="libs/smartwizard/jquery.smartWizard.min.js"></script>
+
+<script src="libs/parsleyjs/parsley.min.js"></script>
+
+<script src="js/pages/form-wizard.init.js"></script>
+
+<script>
+
+</script>
+</body>
+</html>
